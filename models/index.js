@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/3000");
+mongoose.connect("mongodb://localhost/meal-2-meal");
 
 var Meal = require('./meal');
 // var Ingredient = require('./ingredient');
