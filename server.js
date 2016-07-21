@@ -35,6 +35,7 @@ app.get('/', function homepage (req, res) {
 
  app.get('/api/meals', controllers.meals.index);
 
+ app.get('/api/albums/:albumId', controllers.albums.show);
 
 /**********
  * SERVER *
