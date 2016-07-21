@@ -1,0 +1,26 @@
+{
+  "name": "meal-2-meal",
+  "description": "Meal 2 Meal Web App",
+  "main": "server.js",
+  "authors": [
+    "Switt Srikulacheep"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "meal2meal",
+    "nutrition"
+  ],
+  "homepage": "https://github.com/SwittS/meal-2-meal",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.1.0"
+  }
+}
