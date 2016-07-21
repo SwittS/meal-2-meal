@@ -39,6 +39,8 @@ app.get('/', function homepage (req, res) {
 
  app.get('/api/meals/:mealId', controllers.meals.show);
 
+ app.delete('/api/meals/:mealId', controllers.meals.destroy);
+
 /**********
  * SERVER *
  **********/
