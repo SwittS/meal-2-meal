@@ -21,6 +21,14 @@ function create(req, res) {
   });
 }
 
+function show(req, res) {
+  db.Meal.findById(req.params.mealId, function(err, foundMeal) {
+    if(err) { console.log('mealsController.show error', err); }
+    console.log('mealsController.show responding with', foundMeal);
+    res.json(foundMeal);
+  });
+}
+
 
 
 
@@ -34,8 +42,8 @@ function create(req, res) {
 // export public methods here
 module.exports = {
   index: index,
-  create: create
-  // show: show
+  create: create,
+  show: show
   // destroy: destroy,
   // update: update
 };
