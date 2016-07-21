@@ -30,8 +30,22 @@ function show(req, res) {
 function destroy(req, res) {
   db.Meal.findOneAndRemove({_id: req.params.mealId }, function(err, foundMeal) {
     if(err) { console.log('mealsController.show error', err); }
-    console.log('Meal Entry Deleted', foundMeal);
+    console.log('Meal entry was succesfully deleted!', foundMeal);
     res.json(foundMeal);
+  });
+}
+
+function update(req, res) {
+  console.log('updating with data', req.body);
+  var ingredients = req.body.ingredients.split(',').map(function(item) { return item.trim(); } );
+  db.Meal.findById(req.params.mealId, function(err, foundMeal) {
+    if(err) { console.log('mealsController.update error', err); }
+    foundMeal.name = req.body.name;
+    foundMeal.ingredients = req.body.ingredients;
+    foundMeal.save(function(err, savedMeal) {
+      if(err) { console.log('Sorry, the entry did not update correctly!'); }
+      res.json(savedMeal);
+    });
   });
 }
 
@@ -50,6 +64,6 @@ module.exports = {
   index: index,
   create: create,
   show: show,
-  destroy: destroy
-  // update: update
+  destroy: destroy,
+  update: update
 };

@@ -35,12 +35,13 @@ app.get('/', function homepage (req, res) {
 
  app.get('/api/meals', controllers.meals.index);
 
- app.post('/api/meals', controllers.meals.create);
-
  app.get('/api/meals/:mealId', controllers.meals.show);
+
+ app.post('/api/meals', controllers.meals.create);
 
  app.delete('/api/meals/:mealId', controllers.meals.destroy);
 
+ app.put('/api/meals/:mealId', controllers.meals.update);
 /**********
  * SERVER *
  **********/
