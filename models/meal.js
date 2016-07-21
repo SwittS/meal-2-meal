@@ -8,6 +8,6 @@ var MealSchema = new Schema({
   songs: [ Ingredient.schema ]
 });
 
-var MealSchema = mongoose.model('Meal', MealSchema);
+var Meal = mongoose.model('Meal', MealSchema);
 
 module.exports = Meal;
