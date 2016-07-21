@@ -35,7 +35,9 @@ app.get('/', function homepage (req, res) {
 
  app.get('/api/meals', controllers.meals.index);
 
- app.get('/api/meals/:mealId', controllers.albums.show);
+ app.post('/api/meals', controllers.meals.create);
+
+ // app.get('/api/meals/:mealId', controllers.meals.show);
 
 /**********
  * SERVER *

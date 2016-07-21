@@ -3,11 +3,11 @@ var db = require("./models");
 var meals_list = [
               {
                 name: " 8oz Chicken Breast and 200g Rice",
-                ingredients: []
+                ingredients: [ 'chicken breast', 'rice']
               },
               {
                 name: " 8oz Ribeye Steak and 200g Yukon Potatoes",
-                ingredients: []
+                ingredients: [ 'ribeye steak', 'yukon potato']
               }
 ];
 

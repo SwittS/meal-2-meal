@@ -5,7 +5,7 @@ var Ingredient = require('./ingredient');
 
 var MealSchema = new Schema({
   name: String,
-  ingredients: [ Ingredient.schema ]
+  ingredients: [ String ]
 });
 
 var Meal = mongoose.model('Meal', MealSchema);
