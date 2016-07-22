@@ -6,4 +6,4 @@ var Meal = require('./meal');
 module.exports.Meal = Meal;
 // module.exports.Ingredient = Ingredient;
 
-mongoose.connect( process.env.MONGODB_URI || "monggodb://localhost/meal-2-meal" );
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/meal-2-meal" );
