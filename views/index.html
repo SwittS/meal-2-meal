@@ -5,37 +5,90 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal 2 Meal</title>
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css" media="screen,projection" />
 
     <!-- VENDOR SCRIPTS -->
-    <script src="vendor/jQuery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/handlebars/handlebars.min.js"></script>
-
+    <script src="vendor/jQuery/dist/jquery.min.js"></script>
     <!-- APPLICATION SCRIPTS -->
     <script src="scripts/app.js"></script>
 </head>
 
 <body>
-  <div class="navbar-fixed">
-     <nav>
-       <div class="nav-wrapper">
-         <a href="#!" class="brand-logo">Meal 2 Meal</a>
-         <ul class="right hide-on-med-and-down">
-           <li><a href="sass.html">Home</a></li>
-           <li><a href="badges.html">Meal Index</a></li>
-           <li><a href="collapsible.html">How To Use</a></li>
-         </ul>
-       </div>
-     </nav>
-   </div>
+    <div class="navbar-fixed #1e88e5 blue darken-4">
+        <nav>
+            <div class="nav-wrapper #1e88e5 blue darken-4">
+                <a href="#!" class="brand-logo right">Meal 2 Meal</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="sass.html">Home</a></li>
+                    <li><a href="badges.html">Meal Index</a></li>
+                    <li><a href="collapsible.html">How To Use</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="http://i.imgur.com/gJZwosi.jpg" title="source: imgur.com" /></div>
+    </div>
+
+    <div class="section white">
+        <div class="row container">
+            <div class="row">
+                <div class="col s4">
+                    <a class="waves-effect waves-light btn #1e88e5 blue darken-4"><i class="material-icons left">library_add</i>Create a meal</a>
+                </div>
+                <div class="col s4">
+                    <a class="waves-effect waves-light btn #1e88e5 blue darken-4"><i class="material-icons left">mode_edit</i>Update a meal</a>
+                </div>
+                <div class="col s4">
+                    <a class="waves-effect waves-light btn #1e88e5 blue darken-4"><i class="material-icons left">delete</i>Delete a meal</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="row">
+                <div class="input-field col s6">
+                    <select>
+                        <option value="" disabled selected>Choose your first meal</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Meal 1</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <select>
+                        <option value="" disabled selected>Choose your second meal</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Meal 2</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="http://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
+    </div>
+    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
 
 </body>
 
