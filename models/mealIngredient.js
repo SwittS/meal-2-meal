@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var Meal = require('./meal');
 var Ingredient = require('./ingredient');
 
-var MealInstructorSchema = new Schema({
+var MealIngredientSchema = new Schema({
   _meal: {type: Schema.Types.ObjectId,ref: 'Meal'},
   _ingredient: {type: Schema.Types.ObjectId, ref: 'Ingredient'}
 });
