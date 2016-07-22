@@ -8,7 +8,9 @@ var bodyParser = require('body-parser');
 var db = require('./models');
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 // We'll serve jQuery and bootstrap from a local bower cache avoiding CDNs
 // We're placing these under /vendor to differentiate them from our own assets
@@ -24,29 +26,29 @@ var controllers = require('./controllers');
  * HTML Endpoints
  */
 
-app.get('/', function homepage (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+app.get('/', function homepage(req, res) {
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 /*
  * JSON API Endpoints
  */
- app.get('/api', controllers.api.index);
+app.get('/api', controllers.api.index);
 
- app.get('/api/meals', controllers.meals.index);
+app.get('/api/meals', controllers.meals.index);
 
- app.get('/api/meals/:mealId', controllers.meals.show);
+app.get('/api/meals/:mealId', controllers.meals.show);
 
- app.post('/api/meals', controllers.meals.create);
+app.post('/api/meals', controllers.meals.create);
 
- app.delete('/api/meals/:mealId', controllers.meals.destroy);
+app.delete('/api/meals/:mealId', controllers.meals.destroy);
 
- app.put('/api/meals/:mealId', controllers.meals.update);
+app.put('/api/meals/:mealId', controllers.meals.update);
 /**********
  * SERVER *
  **********/
 
 // listen on port 3000
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Express server is running on http://localhost:3000/');
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Express server is running on http://localhost:3000/');
 });
