@@ -8,6 +8,28 @@ var meals_list = [{
     ingredients: ['ribeye steak', 'yukon potato']
 }];
 
+var ingredients_list = [{
+    name: 'chicken breast',
+    carbohydrates: 0,
+    fats: 2,
+    protein: 48
+}, {
+    name: 'rice',
+    carbohydrates: 57,
+    fats: 0,
+    protein: 5
+}, {
+    name: 'ribeye steak',
+    carbohydrates: 0,
+    fats: 52,
+    protein: 48
+}, {
+    name: 'yukon potato',
+    carbohydrates: 35,
+    fats: 0,
+    protein: 4
+}];
+
 // remove all records that match {} -- which means remove ALL records
 db.Meal.remove({}, function(err, meals) {
     if (err) {
