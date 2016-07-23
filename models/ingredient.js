@@ -4,10 +4,10 @@ var mongoose = require("mongoose"),
 
 var IngredientSchema = new Schema({
   ingredientName: String,
-  mealName: {type: Schema.Types.ObjectId, ref: 'Meal'},
   carbohydrates: Number,
   fats: Number,
-  protein: Number
+  protein: Number,
+  meal: {type: Schema.Types.ObjectId, ref: 'Meal'}
 });
 
 var Ingredient = mongoose.model('Ingredient', IngredientSchema);

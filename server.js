@@ -37,17 +37,19 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/meals', controllers.meals.index);
 
-app.get('/api/meals/:mealId', controllers.meals.show);
+// app.get('/api/meals/:mealId', controllers.meals.show);
+//
+// app.post('/api/meals', controllers.meals.create);
+//
+// app.delete('/api/meals/:mealId', controllers.meals.destroy);
+//
+// app.put('/api/meals/:mealId', controllers.meals.update);
 
-app.post('/api/meals', controllers.meals.create);
+// mealsIngredients crud
 
-app.delete('/api/meals/:mealId', controllers.meals.destroy);
-
-app.put('/api/meals/:mealId', controllers.meals.update);
-
-app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
-
-app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
+// app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
+//
+// app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
 
 /**********
  * SERVER *
