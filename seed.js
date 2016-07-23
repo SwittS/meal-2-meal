@@ -59,6 +59,13 @@ db.Ingredient.remove({}, function(err, ingredients) {
            console.log(err);
            return;
          }
+         ingredient.mealName = foundMeal;
+         ingredient.save(function(err, savedIngredient){
+           if (err) {
+             return console.log(err);
+           }
+           console.log('saved ' + savedIngredient.ingredientName + ' for the meal ' + foundMeal.name);
+         });
        });
      });
    });
