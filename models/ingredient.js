@@ -1,13 +1,13 @@
-var mongoose = require("mongoose"),
-    Schema = mongoose.Schema;
-    Meal = require('./meal');
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var Meal = require('./meal.js');
 
 var IngredientSchema = new Schema({
-  ingredientName: String,
+  food: String,
+  meal: {type: Schema.Types.ObjectId, ref: 'Meal'},
   carbohydrates: Number,
   fats: Number,
-  protein: Number,
-  meal: {type: Schema.Types.ObjectId, ref: 'Meal'}
+  protein: Number
 });
 
 var Ingredient = mongoose.model('Ingredient', IngredientSchema);
