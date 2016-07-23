@@ -4,7 +4,7 @@ var mongoose = require("mongoose"),
 
 var IngredientSchema = new Schema({
   ingredientName: String,
-  name: {type: Schema.Types.ObjectId, ref: 'Meal'},
+  mealName: {type: Schema.Types.ObjectId, ref: 'Meal'},
   carbohydrates: Number,
   fats: Number,
   protein: Number
