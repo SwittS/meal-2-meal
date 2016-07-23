@@ -44,6 +44,11 @@ app.post('/api/meals', controllers.meals.create);
 app.delete('/api/meals/:mealId', controllers.meals.destroy);
 
 app.put('/api/meals/:mealId', controllers.meals.update);
+
+app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
+
+// app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
+
 /**********
  * SERVER *
  **********/
