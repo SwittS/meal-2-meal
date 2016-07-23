@@ -47,7 +47,7 @@ app.put('/api/meals/:mealId', controllers.meals.update);
 
 app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
 
-// app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
+app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
 
 /**********
  * SERVER *
