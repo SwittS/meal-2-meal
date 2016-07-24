@@ -31,7 +31,12 @@ app.get('/', function homepage(req, res) {
 /*
  * JSON API Endpoints
  */
+
+ // API
+
 app.get('/api', controllers.api.index);
+
+// MEALS
 
 app.get('/api/meals', controllers.meals.index);
 
@@ -43,11 +48,19 @@ app.delete('/api/meals/:mealId', controllers.meals.destroy);
 
 app.put('/api/meals/:mealId', controllers.meals.update);
 
-// mealsIngredients crud
+// INGREDIENTS
 
-app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
-//
-// app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
+app.get('/api/ingredients', controllers.mealsIngredients.index);
+
+app.get('/api/ingredients/:ingredientId', controllers.mealsIngredients.show);
+
+app.post('/api/ingredients', controllers.mealsIngredients.create);
+
+app.delete('/api/ingredients/:ingredientId', controllers.mealsIngredients.destroy);
+
+// GET INGREDIENT BY MEAL ID
+
+app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.ingredientsByMealId);
 
 /**********
  * SERVER *
