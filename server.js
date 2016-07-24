@@ -12,8 +12,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-// We'll serve jQuery and bootstrap from a local bower cache avoiding CDNs
-// We're placing these under /vendor to differentiate them from our own assets
 app.use('/vendor', express.static(__dirname + '/bower_components'));
 
 var controllers = require('./controllers');
@@ -37,17 +35,17 @@ app.get('/api', controllers.api.index);
 
 app.get('/api/meals', controllers.meals.index);
 
-// app.get('/api/meals/:mealId', controllers.meals.show);
-//
-// app.post('/api/meals', controllers.meals.create);
-//
-// app.delete('/api/meals/:mealId', controllers.meals.destroy);
-//
-// app.put('/api/meals/:mealId', controllers.meals.update);
+app.get('/api/meals/:mealId', controllers.meals.show);
+
+app.post('/api/meals', controllers.meals.create);
+
+app.delete('/api/meals/:mealId', controllers.meals.destroy);
+
+app.put('/api/meals/:mealId', controllers.meals.update);
 
 // mealsIngredients crud
 
-// app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
+app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.index);
 //
 // app.post('/api/meals/:mealId/ingredients', controllers.mealsIngredients.create);
 

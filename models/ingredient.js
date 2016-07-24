@@ -3,11 +3,8 @@ var Schema = mongoose.Schema;
 var Meal = require('./meal.js');
 
 var IngredientSchema = new Schema({
-  meal: {
-    type: Schema.Types.ObjectId,
-    ref: 'Meal'
-  },
   food: String,
+  meal: { type: Schema.Types.ObjectId, ref: 'Meal' },
   carbohydrates: Number,
   fats: Number,
   protein: Number

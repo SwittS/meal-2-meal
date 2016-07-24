@@ -1,11 +1,20 @@
 var db = require('../models');
 
-// app.get('/api/albums/:albumId/songs', controllers.albumsSongs.index);
-// function index(req, res) {
-//   db.Meal.findById(req.params.mealId, function(err, foundMeal){
-//     console.log('responding with ingredients:', foundMeal.ingredients);
-//     res.json(foundMeal.ingredients);
-//   });
+// GET all ingredients by mealId
+function index(req, res) {
+    var mealId = req.params.mealId;
+    db.Meal.findById(mealId, function(err, foundMeal){
+      if (err) {
+        console.log(err);
+      }
+      db.Ingredient.find({meal: meal}, function (err, foundIngredient){
+        if (err){
+          console.log(foundIngredient + "test");
+        }
+        res.json(foundIngredient);
+      });
+    });
+  }
 // }
 // // }
 // POST '/api/meals/:mealId/ingredients'
@@ -23,7 +32,7 @@ var db = require('../models');
 
 
 // export public methods here
-// module.exports = {
-//     index: index
-// //     // create: create
-// };
+module.exports = {
+    index: index
+// create: create
+};
