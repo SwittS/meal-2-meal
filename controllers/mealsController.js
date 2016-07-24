@@ -10,7 +10,7 @@ var db = require('../models');
 function index(req, res) {
   // send all meals as JSON response
   db.Meal.find()
-    .populate('Ingredient')
+    .populate('ingredient')
     .exec(function(err, meals) {
       if (err) { return console.log("index error: " + err); }
       res.json(meals);

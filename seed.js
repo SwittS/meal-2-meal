@@ -42,7 +42,6 @@ db.Meal.remove({}, function(err, meals) {
         console.log('recreated all meals');
         console.log('created', meals.length, 'meals');
 
-
         db.Ingredient.remove({}, function(err, ingredients) {
             console.log('removed all ingredients');
             ingredients_list.forEach(function(ingredientData) {
@@ -52,10 +51,8 @@ db.Meal.remove({}, function(err, meals) {
                     fats: ingredientData.fats,
                     protein: ingredientData.protein
                 });
-                db.Meal.findOne({
-                    name: ingredientData.meal
-                }, function(err, foundMeal) {
-                    console.log('found meal ' + foundMeal.name + ' which has ingredient ' + ingredient.food);
+                db.Meal.findOne({name: ingredientData.meal}, function (err, foundMeal) {
+                    console.log('found meal ' + foundMeal.name + ' which has the ingredient ' + ingredient.food);
                     if (err) {
                         console.log(err);
                         return;
