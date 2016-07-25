@@ -9,11 +9,22 @@ $(document).ready(function() {
 
     $('.parallax').parallax();
     });
+
+    $('.createMeal').click(function handleCreateMealClick() {
+      console.log('create a meal was clicked!');
+    });
+
+    $('.updateMeal').click(function handleCreateMealClick() {
+      console.log('update a meal was clicked!');
+    });
+
+    $('.deleteMeal').click(function handleCreateMealClick() {
+      console.log('delete a meal was clicked!');
+    });
+
 });
 
-$('.createMeal').on('click', function handleCreateMealClick(e) {
-  console.log('create a meal was clicked!');
-});
+
 
 function renderMeal(meals) {
   console.log('rendering meal', meals);
