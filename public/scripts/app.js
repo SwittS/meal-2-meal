@@ -1,3 +1,5 @@
+document.documentElement.className = 'js';
+
 $(document).ready(function() {
     console.log('Sanity Check: Let\'s Party!');
 
@@ -10,27 +12,40 @@ $(document).ready(function() {
     $('.parallax').parallax();
     });
 
-    $('.createMeal').click(function handleCreateMealClick() {
-      console.log('create a meal was clicked!');
-    });
+    $('#mealCreation').on('submit', function(e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+        console.log('formData', formData);
+        $.post('/api/meals', formData, function(meals) {
+          console.log('meal after POST', meals);
+        });
+        $(this).trigger("reset");
+      });
 
-    $('.updateMeal').click(function handleCreateMealClick() {
+    $('.createMeal').click(function handleCreateMealClick() {
+          if($("#mealCreation").is(":visible")){
+              $("#mealCreation").hide();
+          } else {
+              $("#mealCreation").show();
+          }
+          return false;
+      });
+
+
+    $('.updateMeal').click(function handleUpdateMealClick() {
       console.log('update a meal was clicked!');
     });
 
-    $('.deleteMeal').click(function handleCreateMealClick() {
+    $('.deleteMeal').click(function handleDeleteMealClick() {
       console.log('delete a meal was clicked!');
     });
 
-    $('.compareMeal').click(function handleCreateMealClick() {
+    $('.compareMeal').click(function handleCompareMealClick() {
       console.log('compare a meal was clicked!');
     });
 });
 
-
-
 function renderMeal(meals) {
-  console.log('rendering meal', meals);
   var mealHtml = $('#meal-template').html();
   var mealTemplate = Handlebars.compile(mealHtml);
   var html = mealTemplate(meals);
@@ -39,7 +54,6 @@ function renderMeal(meals) {
 }
 
 function renderMeal2(meals) {
-  console.log('rendering meal', meals);
   var mealHtml = $('#meal-template').html();
   var mealTemplate = Handlebars.compile(mealHtml);
   var html = mealTemplate(meals);

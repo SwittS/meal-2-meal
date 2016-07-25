@@ -15,7 +15,7 @@ function create(req, res) {
         if (err) {
             console.log('error', err);
         }
-        console.log(meal);
+        console.log("This is the meal: ", meal);
         res.json(meal);
     });
 }
