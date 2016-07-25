@@ -4,6 +4,12 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/handlebars/handlebars.min.js"></script>
+    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
+    <script src="scripts/app.js"></script>
+    <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="styles/styles.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,15 +17,10 @@
 
     <!-- STYLESHEETS -->
     <!-- <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"> -->
-    <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css" media="screen,projection" />
-    <link rel="stylesheet" href="styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
     <!-- <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <script src="vendor/handlebars/handlebars.min.js"></script>
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
     <!-- APPLICATION SCRIPTS -->
-    <script src="scripts/app.js"></script>
 </head>
 
 <body>
@@ -54,29 +55,30 @@
                 </div>
             </div>
         </div>
-
-        <div class="row container">
-            <div class="row">
-                <div class="input-field col s6">
-                    <select>
-                        <option value="" disabled selected>Choose your first meal</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    <label>Meal 1</label>
-                </div>
-                <div class="input-field col s6">
-                    <select>
-                        <option value="" disabled selected>Choose your second meal</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-                    <label>Meal 2</label>
+            <div class="row container">
+                <div class="row" >
+                    <div class="input-field col s6">
+                        <select id="mealTarget">
+                            <option value="" disabled selected>Choose your first meal</option>
+                            <script id="meal-template" type="text/x-handlebars-template">
+                            <option value="1" data-meal-id="{{_id}}">{{name}}</option>
+                          </script>
+                        </select>
+                        <label>Meal 1</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <select id="mealTarget2">
+                          <option value="" disabled selected>Choose your second meal</option>
+                          <script id="meal-template" type="text/x-handlebars-template">
+                          <option value="1" data-meal-id="{{_id}}">{{name}}</option>
+                        </script>
+                      </select>
+                      <label>Meal 2</label>
+                    </div>
                 </div>
             </div>
-        </div>
+
+
 
         <div class="row container">
             <div class="row">
@@ -89,7 +91,6 @@
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
     </div>
-    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
 
 </body>
 
