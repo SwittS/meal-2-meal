@@ -22,6 +22,9 @@ $(document).ready(function() {
       console.log('delete a meal was clicked!');
     });
 
+    $('.compareMeal').click(function handleCreateMealClick() {
+      console.log('compare a meal was clicked!');
+    });
 });
 
 
