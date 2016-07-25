@@ -18,11 +18,8 @@
     <!-- <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
     <script src="vendor/handlebars/handlebars.min.js"></script>
     <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
-
     <!-- APPLICATION SCRIPTS -->
     <script src="scripts/app.js"></script>
-
 </head>
 
 <body>
@@ -61,16 +58,13 @@
         <div class="row container">
             <div class="row">
                 <div class="input-field col s6">
-                  <script id="t" type="text/x-handlebars">
                     <select>
-                        <option value="" disabled selected>Choose your first meal</option>{{#each ../meals_List}}
-                        <option value="{{_id}}">{{name}}</option>
-                        {{/each}}
+                        <option value="" disabled selected>Choose your first meal</option>
+                        <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
                         <option value="3">Option 3</option>
                     </select>
                     <label>Meal 1</label>
-                  </script>
                 </div>
                 <div class="input-field col s6">
                     <select>
@@ -82,8 +76,6 @@
                     <label>Meal 2</label>
                 </div>
             </div>
-          </div>
-
         </div>
 
         <div class="row container">
@@ -97,7 +89,7 @@
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
     </div>
-
+    <script type="text/javascript" src="vendor/Materialize/bin/materialize.js"></script>
 
 </body>
 
