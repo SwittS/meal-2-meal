@@ -8,11 +8,11 @@ $(document).ready(function() {
         });
 
     $('.parallax').parallax();
-    // $('select').material_select();
-
-
     });
+});
 
+$('.createMeal').on('click', function handleCreateMealClick(e) {
+  console.log('create a meal was clicked!');
 });
 
 function renderMeal(meals) {
