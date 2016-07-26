@@ -9,12 +9,6 @@ $(document).ready(function() {
         });
     });
 
-    $.get('/api/ingredients').success(function(ingredients) {
-        ingredients.forEach(function(ingredients) {
-            renderIngredient(ingredients);
-        });
-    });
-
     $('#mealTarget').on('click', '.viewAll', handleViewAllClick);
 
     $('#mealTarget').on('click', '.deleteMeal', handleDeleteMealClick);
@@ -26,13 +20,6 @@ function renderMeal(meals) {
     var mealTemplate = Handlebars.compile(mealHtml);
     var html = mealTemplate(meals);
     $('#mealTarget').append(html);
-}
-
-function renderIngredient(ingredients) {
-    var ingedientHtml = $('#ingredient-template').html();
-    var ingredientTemplate = Handlebars.compile(ingredientHtml);
-    var html = ingredientTemplate(ingredients);
-    $('#modal1').append(html);
 }
 
 function handleDeleteMealClick(e) {
