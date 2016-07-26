@@ -15,51 +15,62 @@
 </head>
 
 <body>
-  <div class="parallax-container">
-      <div class="parallax"><img src="https://i.imgur.com/gJZwosi.jpg" title="source: imgur.com" /></div>
-  </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="https://i.imgur.com/gJZwosi.jpg" title="source: imgur.com" /></div>
+    </div>
 
-  <div class="section white">
-      <div class="row container">
-          <div class="row">
-              <div class="col s12 center">
-              <h2>Meal Index</h2>
-              </div>
-              <!-- meals! -->
-                    <div id='mealTarget'>
-                      <script id='meal-template' type='text/x-handlebars-template'>
+    <div class="section white">
+        <div class="row container">
+            <div class="row">
+                <div class="col s12 center">
+                    <h2>Meal Index</h2>
+                </div>
+                <!-- meals! -->
+                <div id='mealTarget'>
+                    <script id='meal-template' type='text/x-handlebars-template'>
                         <!-- one album -->
                         <div class="row meal" data-album-id="{{_id}}">
 
-                          <div class="col-md-10 col-md-offset-1">
-                            <div class="panel panel-default">
-                              <div class="panel-body">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
 
 
-                              <!-- begin album internal row -->
-                                <div class='row'>
+                                        <!-- begin album internal row -->
+                                        <div class='row'>
 
-                                  <div class="col-md-9 col-xs-12">
-                                    <ul class="list-group">
-                                      <li class="list-group-item">
-                                        <h4 class='inline-header'>Meal:</h4>
-                                        <span class='meal-name'>{{name}}</span>
-                                      </script>
+                                            <div class="col-md-9 col-xs-12">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        <h4 class='inline-header'>Meal:</h4>
+                                                        <span class='meal-name'>{{name}}</span>
+                                                    </li>
 
-                                      </li>
+                                                </ul>
+                                            </div>
 
+                                        </div>
+                                        <div class='panel-footer'>
+                                            <div class='panel-footer'>
+                                                <a class="waves-effect waves-light btn #1e88e5 blue darken-4 viewAll"><i class="material-icons left">search
+  </i>View ingredients</a>
+                                                <a class="waves-effect waves-light btn #f44336 red
+ deleteMeal"><i class="material-icons left">delete</i>Delete a meal</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </script>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                    </ul>
-                                  </div>
-
-                                </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="parallax-container">
-      <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
-  </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
+    </div>
 
 </body>
 
