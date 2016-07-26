@@ -50,3 +50,11 @@ footer.page-footer {
 .submit {
     center-align;
 }
+
+h2 {
+  text-decoration: underline;
+}
+
+h3 {
+  text-align: center;
+}
