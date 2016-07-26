@@ -9,9 +9,7 @@ $(document).ready(function() {
         });
       });
 
-
-            $('.modal-trigger').leanModal();
-
+            $('#mealTarget').on('click', '.viewAll', handleViewAllClick);
 
             $('#mealTarget').on('click', '.deleteMeal', handleDeleteMealClick);
 
@@ -40,4 +38,12 @@ function handleDeleteMealSuccess(data) {
   var deletedMealId = data._id;
   console.log('removing the following meal from the page:', deletedMealId);
   $('div[data-meal-id=' + deletedMealId + ']').remove();
+}
+
+function handleViewAllClick(e) {
+  console.log('view all clicked!');
+  var currentMealId = $(this).closest('.meal').data('meal-id');
+  console.log('id',currentMealId);
+  $('.modal-trigger').data('meal-id', currentMealId);
+  $('#modal1').openModal(); // display the modal!
 }
