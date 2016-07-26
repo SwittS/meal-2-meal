@@ -1,12 +1,8 @@
-// SERVER-SIDE JAVASCRIPT
 
-// require express
 var express = require('express');
-// generate a new express app and call it 'app'
 var app = express();
 var bodyParser = require('body-parser');
 var db = require('./models');
-// serve static files from public folder
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({
     extended: true
@@ -61,8 +57,6 @@ app.delete('/api/ingredients/:ingredientId', controllers.mealsIngredients.destro
 // GET INGREDIENT BY MEAL ID
 
 app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.ingredientsByMealId);
-
-//
 
 app.get('/meals', function(req, res) {
     res.sendFile(__dirname + '/views/meals.html');

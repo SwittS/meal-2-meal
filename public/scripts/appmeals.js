@@ -21,8 +21,6 @@ $(document).ready(function() {
 
 });
 
-
-
 function renderMeal(meals) {
     var mealHtml = $('#meal-template').html();
     var mealTemplate = Handlebars.compile(mealHtml);
@@ -58,5 +56,5 @@ function handleViewAllClick(e) {
     var currentMealId = $(this).closest('.meal').data('meal-id');
     console.log('id', currentMealId);
     $('.modal-trigger').data('meal-id', currentMealId);
-    $('#modal1').openModal(); // display the modal!
+    $('#modal1').openModal();
 }
