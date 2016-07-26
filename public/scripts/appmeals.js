@@ -47,8 +47,6 @@ function handleViewAllClick(e) {
         method: "GET",
         success: handleViewAllSuccess
     });
-
-    $('.modal-trigger').data('meal-id', currentMealId);
     $('#modal1').openModal();
 }
 
@@ -64,5 +62,5 @@ function renderIngredient(ingredients) {
     var ingredientHtml = $('#ingredient-template').html();
     var ingredientTemplate = Handlebars.compile(ingredientHtml);
     var html = ingredientTemplate(ingredients);
-    $('#modal1').append(html);
+    $('.modal-content').append(html);
 }

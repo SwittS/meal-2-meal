@@ -47,22 +47,26 @@
                                     </div>
                     </script>
                     </div>
+
                     <div id="modal1" class="modal">
                         <div class="modal-content" data-ingredient-id="{{_id}}">
                             <h4>Ingredients</h4>
+                            <script type="text/x-handlebars-template" id="ingredient-template">
+                              <div>
+                              <ul class="ingredientL">
+                              <li>Name: {{food}}</li>
+                              <li>Carbohydrates(g): {{carbohydrates}}</li>
+                              <li>Fats(g): {{fats}}</li>
+                              <li>Protein(g): {{protein}}</li>
+                            </ul>
+                            </div>
+                          </script>
                         </div>
-                        <script type="text/x-handlebars-template" id="ingredient-template">
-                          <ul class="ingredientL">
-                          <li>Name: {{food}}</li>
-                          <li>Carbohydrates(g): {{carbohydrates}}</li>
-                          <li>Fats(g): {{fats}}</li>
-                          <li>Protein(g): {{protein}}</li>
-                        </ul>
-                        </script>
-                        <div class="modal-footer">
-                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-                        </div>
+                      <div class="modal-footer">
+                          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                      </div>
                     </div>
+
                     </div>
                     </div>
                 </div>
