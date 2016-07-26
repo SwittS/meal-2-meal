@@ -1,13 +1,15 @@
 $(document).ready(function() {
     console.log('Sanity Check: Let\'s Party!');
 
-    $('.parallax').parallax();
 
     $.get('/api/meals').success(function(meals) {
         meals.forEach(function(meals) {
             renderMeal(meals);
         });
     });
+
+    $('.parallax').parallax();
+
 
     $('#mealTarget').on('click', '.viewAll', handleViewAllClick);
 
