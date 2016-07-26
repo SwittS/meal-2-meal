@@ -32,7 +32,7 @@ app.get('/', function homepage(req, res) {
  * JSON API Endpoints
  */
 
- // API
+// API
 
 app.get('/api', controllers.api.index);
 
@@ -64,8 +64,8 @@ app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.ingredien
 
 //
 
-app.get('/meals', function (req, res){
-  res.sendFile(__dirname + '/views/meals.html');
+app.get('/meals', function(req, res) {
+    res.sendFile(__dirname + '/views/meals.html');
 });
 
 /**********

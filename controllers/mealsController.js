@@ -2,10 +2,12 @@ var db = require('../models');
 
 function index(req, res) {
     db.Meal.find(function(err, meals) {
-      if (err) { return console.log("index error: " + err); }
-      console.log(meals);
-      res.json(meals);
-  });
+        if (err) {
+            return console.log("index error: " + err);
+        }
+        console.log(meals);
+        res.json(meals);
+    });
 }
 
 function create(req, res) {

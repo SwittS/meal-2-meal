@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
@@ -10,81 +9,62 @@
     <script src="scripts/app.js"></script>
     <link type="text/css" rel="stylesheet" href="vendor/Materialize/bin/materialize.css" media="screen,projection" />
     <link rel="stylesheet" href="styles/styles.css">
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal 2 Meal</title>
-
-    <!-- STYLESHEETS -->
-    <!-- <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"> -->
-
-    <!-- VENDOR SCRIPTS -->
-    <!-- <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <!-- APPLICATION SCRIPTS -->
 </head>
-
 <body>
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/gJZwosi.jpg" title="source: imgur.com" /></div>
     </div>
-
     <div class="section white">
         <div class="row container">
             <div class="row">
-                <div class="col s4 center">
+                <div class="col s6 center">
                     <a class="waves-effect waves-light btn #1e88e5 blue darken-4 createMeal"><i class="material-icons left">library_add</i>Create a meal</a>
                 </div>
-                <div class="col s4 center">
-                    <a href='/meals' class="waves-effect waves-light btn #1e88e5 blue darken-4 viewAll"><i class="material-icons left">search
-</i>View all meals</a>
-                </div>
-                <div class="col s4 center">
-                    <a class="waves-effect waves-light btn #1e88e5 blue darken-4 deleteMeal"><i class="material-icons left">delete</i>Delete a meal</a>
+                <div class="col s6 center">
+                    <a href='/meals' class="waves-effect waves-light btn #1e88e5 blue darken-4 viewAll"><i class="material-icons left">search</i>View all meals</a>
                 </div>
             </div>
         </div>
-
-<div class="row container">
-    <div class="row">
-        <div class="col s4 left">
-            <form class="form-inline" id="mealCreation">
-                <div class="form-group">
-                    <label for="title">Meal Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="Meal Name">
+        <div class="row container">
+            <div class="row">
+                <div class="col s4 left">
+                    <form class="form-inline" id="mealCreation">
+                        <div class="form-group">
+                            <label for="title">Meal Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Meal Name">
+                        </div>
+                        <button class="btn waves-effect waves-light " type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
                 </div>
-                <button class="btn waves-effect waves-light " type="submit" name="action">Submit
-   <i class="material-icons right">send</i>
- </button>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-
-
-
-            <div class="row container">
-                <div class="row" >
-                    <div class="input-field col s6">
-                        <select id="mealTarget">
-                            <option value="" disabled selected>Choose your first meal</option>
-                            <script id="meal-template" type="text/x-handlebars-template">
+        <div class="row container">
+            <div class="row">
+                <div class="input-field col s6">
+                    <select id="mealTarget">
+                        <option value="" disabled selected>Choose your first meal</option>
+                        <script id="meal-template" type="text/x-handlebars-template">
                             <option value="1" data-meal-id="{{_id}}">{{name}}</option>
-                          </script>
-                        </select>
-                        <label>Meal 1</label>
-                    </div>
-                    <div class="input-field col s6">
-                      <select id="mealTarget2">
-                          <option value="" disabled selected>Choose your second meal</option>
-                          <script id="meal-template" type="text/x-handlebars-template">
-                          <option value="1" data-meal-id="{{_id}}">{{name}}</option>
                         </script>
-                      </select>
-                      <label>Meal 2</label>
-                    </div>
+                    </select>
+                    <label>Meal 1</label>
+                </div>
+                <div class="input-field col s6">
+                    <select id="mealTarget2">
+                        <option value="" disabled selected>Choose your second meal</option>
+                        <script id="meal-template" type="text/x-handlebars-template">
+                            <option value="1" data-meal-id="{{_id}}">{{name}}</option>
+                        </script>
+                    </select>
+                    <label>Meal 2</label>
                 </div>
             </div>
-
+        </div>
         <div class="row container">
             <div class="row">
                 <div class="col s12 center">
@@ -96,7 +76,5 @@
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
     </div>
-
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
@@ -13,12 +12,10 @@
     <meta charset="utf-8">
     <title>Index of Meals</title>
 </head>
-
 <body>
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/gJZwosi.jpg" title="source: imgur.com" /></div>
     </div>
-
     <div class="section white">
         <div class="row container">
             <div class="row">
@@ -30,53 +27,39 @@
                     <script id='meal-template' type='text/x-handlebars-template'>
                         <!-- one album -->
                         <div class="row meal" data-meal-id="{{_id}}">
-
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
-
-
                                         <!-- begin album internal row -->
                                         <div class='row'>
-
                                             <div class="col-md-9 col-xs-12">
                                                 <ul class="list-group">
                                                     <li class="list-group-item">
                                                         <h4 class='inline-header'>Meal:</h4>
                                                         <span class='meal-name'>{{name}}</span>
                                                     </li>
-
                                                 </ul>
                                             </div>
-
                                         </div>
                                         <div class='panel-footer'>
                                             <div class='panel-footer'>
-                                                <a class="waves-effect waves-light btn #1e88e5 blue darken-4 viewAll"><i class="material-icons left">search
-  </i>View ingredients</a>
-                                                <a class="waves-effect waves-light btn #f44336 red
- deleteMeal"><i class="material-icons left">delete</i>Delete a meal</a>
+                                                <a class="waves-effect waves-light btn #1e88e5 blue darken-4 viewAll"><i class="material-icons left">search</i>View ingredients</a>
+                                                <a class="waves-effect waves-light btn #f44336 red deleteMeal"><i class="material-icons left">delete</i>Delete a meal</a>
                                             </div>
                                         </div>
                                     </div>
                     </script>
                     </div>
-
                     <!-- Modal Structure -->
                     <div id="modal1" class="modal">
-                        <div class="modal-content">
+                        <div class="modal-content" data-ingredient-id="{{_id}}">
                             <h4>Ingredients</h4>
-
-                            <p>{{food}}</p>
-                            <p>
-                              {{carbohydrates}}
-                            </p>
-                            <p>
-                              {{fats}}
-                            </p>
-                            <p>
-                              {{protein}}
-                            </p>
+                            <script id='ingredient-template' type='text/x-handlebars-template'>
+                                <li>{{food}}</li>
+                                <li>{{carbohydrates}}</li>
+                                <li>{{fats}}</li>
+                                <li>{{protein}}</li>
+                            </script>
                         </div>
                         <div class="modal-footer">
                             <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -88,11 +71,8 @@
             </div>
         </div>
     </div>
-
     <div class="parallax-container">
         <div class="parallax"><img src="https://i.imgur.com/mVlqyPa.jpg" title="source: imgur.com" /></div>
     </div>
-
 </body>
-
 </html>
