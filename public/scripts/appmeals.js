@@ -43,24 +43,26 @@ function handleViewAllClick(e) {
     var currentMealId = $(this).closest('.meal').data('meal-id');
     console.log('id', currentMealId);
     $.ajax({
-      url: '/api/meals/' + currentMealId + '/ingredients',
-      method: "GET",
-      success: handleViewAllSuccess
+        url: '/api/meals/' + currentMealId + '/ingredients',
+        method: "GET",
+        success: handleViewAllSuccess
     });
 
-$('.modal-trigger').data('meal-id', currentMealId);
-$('#modal1').openModal();
-}
-function handleViewAllSuccess(ingredients) {
-  console.log(ingredients);
-  ingredients.forEach(function(ingredient){
-    renderIngredient(ingredient);
-  });
+    $('.modal-trigger').data('meal-id', currentMealId);
+    $('#modal1').openModal();
 }
 
-function renderIngredient(ingredients){
-  var ingredientHtml = $('#ingredient-template').html();
-  var ingredientTemplate = Handlebars.compile(ingredientHtml);
-  var html = ingredientTemplate(ingredients);
-  $('#modal1').append(html);
+function handleViewAllSuccess(ingredients) {
+    console.log(ingredients);
+    $('.ingredientL').remove();
+    ingredients.forEach(function(ingredient) {
+        renderIngredient(ingredient);
+    });
+}
+
+function renderIngredient(ingredients) {
+    var ingredientHtml = $('#ingredient-template').html();
+    var ingredientTemplate = Handlebars.compile(ingredientHtml);
+    var html = ingredientTemplate(ingredients);
+    $('#modal1').append(html);
 }
