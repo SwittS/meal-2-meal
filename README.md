@@ -22,3 +22,9 @@ This project was completed over the course of five days. The goal of the project
 * Ability to add ingredients to a meal
 * Include a tutorial of how to use the app
 * Integrate a nutrition based API
+
+##Screenshots
+<a href="http://imgur.com/vZWHFz7"><img src="http://i.imgur.com/vZWHFz7.png" title="source: imgur.com" /></a>
+<a href="http://imgur.com/v3FrvJV"><img src="http://i.imgur.com/v3FrvJV.png" title="source: imgur.com" /></a>
+<a href="http://imgur.com/1KKJvoC"><img src="http://i.imgur.com/1KKJvoC.png" title="source: imgur.com" /></a>
+<a href="http://imgur.com/Hrvsc99"><img src="http://i.imgur.com/Hrvsc99.png" title="source: imgur.com" /></a>
