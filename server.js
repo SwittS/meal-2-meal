@@ -62,6 +62,12 @@ app.delete('/api/ingredients/:ingredientId', controllers.mealsIngredients.destro
 
 app.get('/api/meals/:mealId/ingredients', controllers.mealsIngredients.ingredientsByMealId);
 
+//
+
+app.get('/meals', function (req, res){
+  res.sendFile(__dirname + '/views/meals.html');
+});
+
 /**********
  * SERVER *
  **********/

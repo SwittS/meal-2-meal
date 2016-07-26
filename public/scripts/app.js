@@ -12,6 +12,9 @@ $(document).ready(function() {
     $('.parallax').parallax();
     });
 
+
+
+
     $('#mealCreation').on('submit', function(e) {
         e.preventDefault();
         var formData = $(this).serialize();
@@ -32,8 +35,8 @@ $(document).ready(function() {
       });
 
 
-    $('.updateMeal').click(function handleUpdateMealClick() {
-      console.log('update a meal was clicked!');
+    $('.viewAll').click(function handleUpdateMealClick() {
+      console.log('view all meals was clicked!');
     });
 
     $('.deleteMeal').click(function handleDeleteMealClick() {
