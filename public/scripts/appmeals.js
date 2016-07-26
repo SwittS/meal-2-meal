@@ -7,12 +7,8 @@ $(document).ready(function() {
         meals.forEach(function(meals) {
             renderMeal(meals);
         });
-    //
-    // $.get('/api/ingredients').success(function(meals) {
-    //         ingredients.forEach(function(meals) {
-    //             renderMeal(meals);
-    //         });
-    //       });
+
+
 
     });
 });
@@ -22,5 +18,4 @@ function renderMeal(meals) {
     var mealTemplate = Handlebars.compile(mealHtml);
     var html = mealTemplate(meals);
     $('#mealTarget').append(html);
-    $('select').material_select();
 }

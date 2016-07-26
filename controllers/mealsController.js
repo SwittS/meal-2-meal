@@ -1,10 +1,9 @@
 var db = require('../models');
 
 function index(req, res) {
-    db.Meal.find()
-    .populate('ingredient')
-    .exec(function(err, meals) {
+    db.Meal.find(function(err, meals) {
       if (err) { return console.log("index error: " + err); }
+      console.log(meals);
       res.json(meals);
   });
 }
