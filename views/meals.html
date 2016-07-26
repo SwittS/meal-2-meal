@@ -29,7 +29,7 @@
                 <div id='mealTarget'>
                     <script id='meal-template' type='text/x-handlebars-template'>
                         <!-- one album -->
-                        <div class="row meal" data-album-id="{{_id}}">
+                        <div class="row meal" data-meal-id="{{_id}}">
 
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="panel panel-default">
@@ -60,6 +60,29 @@
                                         </div>
                                     </div>
                     </script>
+                    </div>
+                    <!-- Modal Trigger -->
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>Ingredients</h4>
+
+                            <p>{{food}}</p>
+                            <p>
+                              {{carbohydrates}}
+                            </p>
+                            <p>
+                              {{fats}}
+                            </p>
+                            <p>
+                              {{protein}}
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                        </div>
                     </div>
                     </div>
                     </div>
