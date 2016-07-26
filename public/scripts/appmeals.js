@@ -3,10 +3,10 @@ $(document).ready(function() {
 
     $('.parallax').parallax();
 
-    // $.get('/api/meals').success(function(meals) {
-    //     meals.forEach(function(meals) {
-    //         renderMeal(meals);
-    //     });
+    $.get('/api/meals').success(function(meals) {
+        meals.forEach(function(meals) {
+            renderMeal(meals);
+        });
     //
     // $.get('/api/ingredients').success(function(meals) {
     //         ingredients.forEach(function(meals) {
@@ -15,6 +15,7 @@ $(document).ready(function() {
     //       });
 
     });
+});
 
 function renderMeal(meals) {
     var mealHtml = $('#meal-template').html();
